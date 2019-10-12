@@ -23,12 +23,24 @@ a{
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
+/* Change the color to dark green on hover */
 li a:hover {
   background-color: #062601;
   text-decoration: none;
+  color: white;
 }
 
+/* Change color to dark green for current page*/
 .active {
+  background-color: #062601;
+}
+
+.button {
   background-color: #03588C;
+  color: white;
+  text-align: center;
+}
+
+.button:hover{
+  background-color:rgb(2, 71, 114);
 }

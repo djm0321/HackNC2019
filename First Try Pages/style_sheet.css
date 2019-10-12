@@ -39,6 +39,8 @@ li a:hover {
   background-color: #03588C;
   color: white;
   text-align: center;
+  border: none;
+  text-decoration: none;
 }
 
 .button:hover{

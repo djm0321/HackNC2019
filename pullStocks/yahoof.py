@@ -1,14 +1,20 @@
 # Import yfinance
 import yfinance as yf
-
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()
 # Get the data for the stock Apple by specifying the stock ticker, start date, and end date
 data = yf.download('MMM','2016-01-01','2017-01-01')
-print(type(data))
+
 # Plot the close prices
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
-#print(data)
+print(type(data))
+#print(data['Date'])
+#pd.to_datetime(data['Date'],format='%m/%d/%Y')
 
-plot = sns.relplot(x="Date", y="Close", data=data);
-#plot.show()
+#data = data.set_index(pd.datetimeIndex(data['Date']))
+
+sns.lineplot(x=data.index, y="Close", data=data);
+plt.show()
+#pd.to_datetime(df['DATES'],format='%m/%d/%Y')
